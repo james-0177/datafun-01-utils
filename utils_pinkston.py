@@ -1,4 +1,4 @@
-''' ITERATION 4
+''' Final Iteration
 
 Module: Pinkston Analytics - Reusable Module for My Data Analytics Projects
 
@@ -78,6 +78,14 @@ Skills Offered:  {skills_offered}
 Tools Used:  {tools_used}
 Average Local Monthly Temperature (F):  {avg_local_monthly_temp}
 Client Satisfaction Scores:  {client_satisfaction_scores}
+Minimum Satisfacton Score:  {min_score}
+Maximum Satisfaction Score:  {max_score}
+Mean Satisfaction Score:  {mean_score}
+Standard Deviation of Satisfaction Scores:  {stdev_score}
+Minimum Average Local Monthly Temperature (F):  {min_temp}
+Maximum Average Local Monthly Temperature (F):  {max_temp}
+Mean Average Local Monthly Temperature (F):  {mean_temp}
+Standard Deviation of the Average Local Monthly Temperature (F):  {stdev_temp}
 """
 
 #####################################
