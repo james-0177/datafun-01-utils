@@ -1,15 +1,31 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Module: Pinkston Analytics - Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects.
 
 Process:
-In this third iteration, I declare additional variables to show skills with different data types.
+In this fourth iteration, I introduce some basic statistics using Python.
+    - min() is a built in function to find the smallest value passed in
+    - max() is a built in function to find the largest value passed in
+    - The statistics module offers methods to calculate mean and standard deviation.
 '''
+
 #####################################
-# Declare global variables - keep byline at the end.
-# We will use this information in a smarter byline.
+# Import modules at the top.
+#####################################
+
+# In Python, we can import modules to add extra tools and functions.
+# Below, we're importing:
+# - `statistics`:  This gives us tools to calculate things like averages.
+# Use CTRL F and type statistics to see where it is used in the code.
+# Did you find statistics.mean()?
+# Did you find statistics.stdev()?
+
+import statistics
+
+#####################################
+# Declare global variables
 #####################################
 
 # Boolean variables to indicate if the company has international clients and is privately owned.
@@ -27,6 +43,23 @@ tools_used:  list = ["Excel", "Git", "GitHub", "Python", "SQL"]
 # List of floats representing individual client satisfaction scores and average monthly temperature in Jefferson City, MO.
 client_satisfaction_scores:  list = [4.8, 4.6, 4.9, 5.0, 4.7]
 avg_local_monthly_temp:  list = [31.7, 35.3, 45.5, 56.7, 66.1, 75.1, 79.6, 78.2, 70.5, 58.4, 46.6, 35.5]
+
+#####################################
+# Calculate Basic Statistics
+#    Do this BEFORE we declare the byline
+#    so the values have been calculated
+#    and are ready for use in the byline.
+#####################################
+
+# Calculate basic stats using built-in functions min(), max(), and statistics module functions mean() and stdev().
+min_score:  float = min(client_satisfaction_scores)
+max_score:  float = max(client_satisfaction_scores)
+mean_score:  float = statistics.mean(client_satisfaction_scores)
+stdev_score:  float = statistics.stdev(client_satisfaction_scores)
+min_temp:  float = min(avg_local_monthly_temp)
+max_temp:  float = max(avg_local_monthly_temp)
+mean_temp:  float = statistics.mean(avg_local_monthly_temp)
+stdev_temp:  float = statistics.stdev(avg_local_monthly_temp)
 
 #####################################
 # Declare a global variable named byline.
@@ -62,7 +95,7 @@ def get_byline() -> str:
 # The main() function now calls the get_byline function to retrieve the byline.
 
 def main() -> None:
-    '''Print the byline to the console when this function is called.'''
+    '''Print results of get_byline() when main() is called.'''
     print(get_byline())
 
 #####################################
